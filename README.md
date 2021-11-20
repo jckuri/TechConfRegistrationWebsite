@@ -45,3 +45,8 @@ Student provides a README that includes a short explanation and reasoning of the
 
 Student provides a README that includes a monthly cost analysis of the project detailing each resource’s cost
 
+--------------------------------------------------------------------------------
+
+# INSTRUCTIONS TO INSTALL AND TO RUN THE PROJECT
+
+
