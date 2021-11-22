@@ -49,4 +49,8 @@ Student provides a README that includes a monthly cost analysis of the project d
 
 # INSTRUCTIONS TO INSTALL AND TO RUN THE PROJECT
 
+### Run database script
+
+Execute the command `sh create_postgres_database.sh` to create the Postgres database.
+
 
