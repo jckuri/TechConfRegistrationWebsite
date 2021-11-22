@@ -1,4 +1,4 @@
-PREFIX=jckuriproject3
+PREFIX="jckuriproject3"
 RESOURCEGROUP="$PREFIXresourcegroup"
 LOCATION="westus"
 STORAGEACCOUNT="$PREFIXstorageaccount"
