@@ -187,6 +187,7 @@ Creating database...
 
 ![images/database_connection.png](images/database_connection.png)
 
+![images/restore_database.png](images/restore_database.png)
 
 ```
 CREATE SEQUENCE attendee_id START 6 OWNED BY attendee.id;
