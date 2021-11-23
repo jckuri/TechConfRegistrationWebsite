@@ -187,4 +187,13 @@ Creating database...
 
 ![images/database_connection.png](images/database_connection.png)
 
+
+```
+CREATE SEQUENCE attendee_id START 6 OWNED BY attendee.id;
+ALTER TABLE attendee ALTER COLUMN id SET DEFAULT nextval('attendee_id');
+CREATE SEQUENCE notification_id START 6 OWNED BY notification.id;
+ALTER TABLE notification ALTER COLUMN id SET DEFAULT nextval('notification_id');
+```
+
 ![images/query_tool.png](images/query_tool.png)
+
