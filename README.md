@@ -183,4 +183,6 @@ Creating database...
 
 ```
 
+### Restore the database
 
+![images/database_connection.png](images/database_connection.png)
