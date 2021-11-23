@@ -198,3 +198,14 @@ ALTER TABLE notification ALTER COLUMN id SET DEFAULT nextval('notification_id');
 
 ![images/query_tool.png](images/query_tool.png)
 
+### Initialize the Azure Function
+
+```
+pipenv shell
+pipenv install
+func init function --python
+cd function
+func new --name QueueTrigger --template "Azure Service Bus Queue trigger" --language python
+```
+
+
