@@ -16,6 +16,10 @@ Student provides a screenshot of the Azure resource showing the app service plan
 	
 Student provides a screenshot of the application successfully running with the URL in this format https://*.azurewebsites.net**. The screenshot should be fullscreen showing the URL and application running.
 
+![screenshots/application_running.png](screenshots/application_running.png)
+
+https://techconf2022.azurewebsites.net/
+
 ## Migrate Database
 
 ### Create an Azure Postgres database in Azure
