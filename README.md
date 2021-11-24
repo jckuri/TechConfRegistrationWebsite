@@ -53,13 +53,21 @@ Student provides screenshots of the following showing functionality of the deplo
 
 1. Submitting a new notification
 
+We send the notification:
+
 ![screenshots/new_notification.png](screenshots/new_notification.png)
+
+The notification is submitted. But it's not completed yet.
 
 ![screenshots/notification_submitted.png](screenshots/notification_submitted.png)
 
 2. Notification processed after executing the Azure function
 
+The submitted notification is completed as a asyncronous process via Service Bus:
+
 ![screenshots/notification_completed.png](screenshots/notification_completed.png)
+
+I received the notification in my e-mail account:
 
 ![screenshots/email_sent.png](screenshots/email_sent.png)
 
