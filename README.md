@@ -208,4 +208,8 @@ cd function
 func new --name QueueTrigger --template "Azure Service Bus Queue trigger" --language python
 ```
 
+[function/QueueTrigger/__init__.py](function/QueueTrigger/__init__.py)
 
+[web/app/routes.py](web/app/routes.py)
+
+### ABC
