@@ -8,6 +8,10 @@
 	
 Student provides a screenshot of the Azure resource showing the app service plan
 
+![screenshots/app_service_plan.png](screenshots/app_service_plan.png)
+
+![screenshots/app_service.png](screenshots/app_service.png)
+
 ### Web App code deployed in Azure
 	
 Student provides a screenshot of the application successfully running with the URL in this format https://*.azurewebsites.net**. The screenshot should be fullscreen showing the URL and application running.
