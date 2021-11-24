@@ -650,9 +650,13 @@ Endpoint=sb://jckuriproject3servicebus.servicebus.windows.net/;SharedAccessKeyNa
 
 Update the attributes `AzureWebJobsStorage`, `AzureWebJobsServiceBus` and `SENDGRID_API_KEY` in the file `local.settings.json` and in the configuration of the function app in the Azure portal.
 
+![images/function_app_configuration.png](images/function_app_configuration.png)
+
+This step is important to deploy the Function App in Azure in a correct way, without producing errors.
+
 Update the attributes `queueName` and `connection` in the file `function.json`.
 
-Update the file `config.py`.
+Update the file [web/config.py](web/config.py) and complete all the TODOs.
 
 ### Locally test the Function App and the Web App
 
