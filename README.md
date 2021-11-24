@@ -42,6 +42,10 @@ Student provides a screenshot of the web app successfully loading the list of at
 	
 Student provides a screenshot of the Azure Function app running in Azure showing the function name and the function app plan
 
+![screenshots/function_app.png](screenshots/function_app.png)
+
+![screenshots/function_app_plan.png](screenshots/function_app_plan.png)
+
 ### Azure function code implemented, deployed, and triggered
 
 Student provides screenshots of the following showing functionality of the deployed site:
