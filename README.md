@@ -593,7 +593,7 @@ Update the file `config.py`.
 pipenv shell
 pipenv install
 cd function
-func start
+func start --verbose
 ```
 
 ```
