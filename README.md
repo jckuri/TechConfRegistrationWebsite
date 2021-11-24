@@ -93,6 +93,10 @@ Student provides a README that includes a monthly cost analysis of the project d
 | Storage account                      | jckuriproject3store       | Standard/Hot StorageV2 (general purpose v2) | $20.80       |
 | App Service                          | TECHCONF2022              | F1: Free                                    | $0           |
 
+Total monthly cost:
+
+0 + 0.05 + 37.77 + 20.80 + 0 = $58.62
+
 --------------------------------------------------------------------------------
 
 # INSTRUCTIONS TO INSTALL AND TO RUN THE PROJECT
