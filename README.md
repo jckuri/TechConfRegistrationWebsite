@@ -77,7 +77,7 @@ I received the notification in my e-mail account:
 	
 Student provides a README that includes a short explanation and reasoning of the architecture selected for both the Azure web app and the Azure function in terms of cost-effectiveness
 
-- The web app is cost-effective because services are reasonably priced. Try running this web app in on-premises and you will notice the increase in prices.
+- The web app and the function app are cost-effective because these services are reasonably priced. Try running these services in on-premises and you will notice the increase in prices.
 - The web app is scalable because it will scale at the presence of huge amounts of user information and peak usage in specific times, i.e. nearby the registration deadline.
 - The function app to handle notifications is scalable because notifications are sent asynchronously via a Service Bus instead of doing it through synchronous method that could produce HTTP timeout exceptions when there are too many attendees to be notified.
 

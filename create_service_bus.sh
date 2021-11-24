@@ -2,7 +2,6 @@ PREFIX="jckuriproject3"
 RESOURCEGROUP="${PREFIX}resourcegroup"
 LOCATION="westus"
 SERVICEBUS="${PREFIX}servicebus"
-#QUEUE="${PREFIX}queue"
 QUEUE="notificationqueue"
 
 echo "PREFIX: $PREFIX"
