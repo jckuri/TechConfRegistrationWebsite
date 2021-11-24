@@ -68,9 +68,21 @@ Student provides screenshots of the following showing functionality of the deplo
 	
 Student provides a README that includes a short explanation and reasoning of the architecture selected for both the Azure web app and the Azure function in terms of cost-effectiveness
 
+- The web app is cost-effective because services are reasonably priced. Try running this web app in on-premises and you will see the increase in prices.
+- The web app is scalable because it will scale at the presence of huge amounts of user information and peak usage in specific times, i.e. nearby the deadline registration.
+- The function app to handle notifications is scalable because notifications are sent asynchronously via a Service Bus instead of doing it through synchronous method that will produce HTTP timeout exceptions.
+
 ### Predict the monthly cost of each Azure Resource
 
 Student provides a README that includes a monthly cost analysis of the project detailing each resource’s cost
+
+| RESOURCE                             | NAME                      | TIER                                        | MONTHLY COST |
+|--------------------------------------|---------------------------|---------------------------------------------|--------------|
+| Function App                         | jckuriproject3functionapp | Consumption                                 | $0           |
+| Service Bus Namespace                | jckuriproject3servicebus  | Basic                                       | $0.05        |
+| Azure Database for PostgreSQL server | jckuriproject3sqlserver   | B_Gen5_1                                    | $37.77       |
+| Storage account                      | jckuriproject3store       | Standard/Hot StorageV2 (general purpose v2) | $20.80       |
+| App Service                          | TECHCONF2022              | F1: Free                                    | $0           |
 
 --------------------------------------------------------------------------------
 
