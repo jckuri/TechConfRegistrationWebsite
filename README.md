@@ -261,6 +261,8 @@ ALTER TABLE notification ALTER COLUMN id SET DEFAULT nextval('notification_id');
 
 ### Initialize the Azure Function
 
+Run the following commands in order to initialize the Azure Function and to write the template code:
+
 ```
 pipenv shell
 pipenv install
@@ -269,6 +271,7 @@ cd function
 func new --name QueueTrigger --template "Azure Service Bus Queue trigger" --language python
 ```
 
+Modify the QueueTrigger to send the notifications to attendees in an asynchronous way:
 [function/QueueTrigger/__init__.py](function/QueueTrigger/__init__.py)
 
 [web/app/routes.py](web/app/routes.py)
