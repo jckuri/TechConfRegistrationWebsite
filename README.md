@@ -54,9 +54,11 @@ Student provides screenshots of the following showing functionality of the deplo
 
 ![screenshots/new_notification.png](screenshots/new_notification.png)
 
-
+![screenshots/notification_submitted.png](screenshots/notification_submitted.png)
 
 2. Notification processed after executing the Azure function
+
+![screenshots/notification_completed.png](screenshots/notification_completed.png)
 
 ## Predicting Costs
 
