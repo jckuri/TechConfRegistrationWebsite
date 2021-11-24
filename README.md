@@ -648,7 +648,7 @@ Endpoint=sb://jckuriproject3servicebus.servicebus.windows.net/;SharedAccessKeyNa
 
 ### Update Attributes
 
-Update the attributes `AzureWebJobsStorage`, `AzureWebJobsServiceBus` and `SENDGRID_API_KEY` in the file `local.settings.json` and in the configuration of the function app in the Azure portal.
+Update the attributes `AzureWebJobsStorage`, `AzureWebJobsServiceBus` and `SENDGRID_API_KEY` in the file `local.settings.json` and in the Function App configuration in the Azure portal.
 
 ![images/function_app_configuration.png](images/function_app_configuration.png)
 
