@@ -616,5 +616,9 @@ func azure functionapp publish jckuriproject3functionapp
 pipenv shell
 pipenv install
 cd web
-az webapp up --resource-group jckuriproject3resourcegroup --name jckuriproject3techconf --sku F1 
+az webapp up --resource-group jckuriproject3resourcegroup --name TECHCONF2022 --sku F1 
 ```
+
+### Test the Web App
+
+Use the functions registration and send notification.

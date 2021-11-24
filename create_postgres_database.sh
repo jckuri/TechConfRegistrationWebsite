@@ -16,7 +16,7 @@ echo "CREATING RESOURCE GROUP..."
 az group create --name $RESOURCEGROUP --location $LOCATION
 
 echo "CREATING DATASE SERVER..."
-az postgres server create --location $LOCATION --resource-group $RESOURCEGROUP --name $SQLSERVER --admin-user dbadmin --admin-password @dm!np@ssw0rd --sku-name B_Gen5_1
+az postgres server create --location $LOCATION --resource-group $RESOURCEGROUP --name $SQLSERVER --admin-user dbadmin --admin-password admin_password123 --sku-name B_Gen5_1
 
 echo "CREATING FIREWALL RULE..."
 az postgres server firewall-rule create --resource-group $RESOURCEGROUP --server $SQLSERVER --name allips --start-ip-address 0.0.0.0 --end-ip-address 255.255.255.255

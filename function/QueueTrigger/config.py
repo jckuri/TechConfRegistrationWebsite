@@ -6,7 +6,7 @@ class BaseConfig:
     DEBUG = True
     POSTGRES_URL="jckuriproject3sqlserver.postgres.database.azure.com"  #TODO: Update value
     POSTGRES_USER="dbadmin@jckuriproject3sqlserver" #TODO: Update value
-    POSTGRES_PW="@dm!np@ssw0rd"   #TODO: Update value
+    POSTGRES_PW="admin_password123"   #TODO: Update value
     POSTGRES_DB="techconfdb"   #TODO: Update value
     DB_URL = 'postgresql://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
     SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI') or DB_URL
