@@ -3,12 +3,12 @@ import logging
 import sendgrid
 import datetime
 import psycopg2
-from config import BaseConfig as Config
+import config
 
 def main(msg: azure.functions.ServiceBusMessage):
  message = msg.get_body().decode('utf-8')
  logging.info('Python ServiceBus queue trigger processed message: %s', message)
- connection = psycopg2.connect(dbname = Config.POSTGRES_DB, user = Config.POSTGRES_USER, password = Config.POSTGRES_PW, host = Config.POSTGRES_URL)
+ connection = psycopg2.connect(dbname = config.BaseConfig.POSTGRES_DB, user = config.BaseConfig.POSTGRES_USER, password = config.BaseConfig.POSTGRES_PW, host = config.BaseConfig.POSTGRES_URL)
  cursor = connection.cursor()
  try:
   notification_id = int(message)
@@ -22,9 +22,9 @@ def main(msg: azure.functions.ServiceBusMessage):
   attendees_result = cursor.fetchall()
   for email_field, first_name_field in attendees_result:
    content_field = "Hello {},\n\n{}".format(first_name_field, body_field)
-   mail_object = sendgrid.helpers.mail.Mail(from_email = Config.ADMIN_EMAIL_ADDRESS, to_emails = email_field, subject = subject_field, plain_text_content = content_field)
+   mail_object = sendgrid.helpers.mail.Mail(from_email = config.BaseConfig.ADMIN_EMAIL_ADDRESS, to_emails = email_field, subject = subject_field, plain_text_content = content_field)
    try:
-    sendgrid_api = sendgrid.SendGridAPIClient(Config.SENDGRID_API_KEY)
+    sendgrid_api = sendgrid.SendGridAPIClient(config.BaseConfig.SENDGRID_API_KEY)
     sendgrid_response = sendgrid_api.send(mail_object)
    except Exception as error:
     logging.error(error)

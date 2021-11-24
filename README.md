@@ -590,31 +590,31 @@ Update the file `config.py`.
 ### Locally test the Function App and the Web App
 
 ```
-cd function
 pipenv shell
 pipenv install
+cd function
 func start
 ```
 
 ```
-cd web
 pipenv shell
 pipenv install
+cd web
 python application.py
 ```
 
 ### Deploy the Function App and the Web App to Azure
 
 ```
-cd function
 pipenv shell
 pipenv install
+cd function
 func azure functionapp publish jckuriproject3functionapp
 ```
 
 ```
-cd web
 pipenv shell
 pipenv install
+cd web
 az webapp up --resource-group jckuriproject3resourcegroup --name jckuriproject3techconf --sku F1 
 ```
