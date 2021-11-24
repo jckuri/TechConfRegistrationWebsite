@@ -12,17 +12,17 @@ echo "SQLSERVER: $SQLSERVER"
 echo "DATABASE: $DATABASE"
 echo "CLIENT IP: $CLIENTIP"
 
-echo "Creating resource group..."
+echo "CREATING RESOURCE GROUP..."
 az group create --name $RESOURCEGROUP --location $LOCATION
 
-echo "Creating database server..."
+echo "CREATING DATASE SERVER..."
 az postgres server create --location $LOCATION --resource-group $RESOURCEGROUP --name $SQLSERVER --admin-user dbadmin --admin-password @dm!np@ssw0rd --sku-name B_Gen5_1
 
-echo "Creating firewall rule..."
+echo "CREATING FIREWALL RULE..."
 az postgres server firewall-rule create --resource-group $RESOURCEGROUP --server $SQLSERVER --name allips --start-ip-address 0.0.0.0 --end-ip-address 255.255.255.255
 
-echo "Showing database server..."
+echo "SHOWING DATABASE SERVER..."
 az postgres server show --resource-group $RESOURCEGROUP --name $SQLSERVER
 
-echo "Creating database..."
+echo "CREATING DATABASE..."
 az postgres db create --name $DATABASE --resource-group $RESOURCEGROUP --server $SQLSERVER

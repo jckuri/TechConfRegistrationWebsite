@@ -1,15 +1,24 @@
 PREFIX="jckuriproject3"
-RESOURCEGROUP="$PREFIXresourcegroup"
+RESOURCEGROUP="${PREFIX}resourcegroup"
 LOCATION="westus"
-SERVICEBUS="$PREFIXservicebus"
-QUEUE="$PREFIXqueue"
+SERVICEBUS="${PREFIX}servicebus"
+QUEUE="${PREFIX}queue"
 
+echo "PREFIX: $PREFIX"
+echo "RESOURCEGROUP: $RESOURCEGROUP"
+echo "LOCATION: $LOCATION"
+echo "SERVICEBUS: $SERVICEBUS"
+echo "QUEUE: $QUEUE"
+
+echo "CREATING SERVICE BUS..."
 az servicebus namespace create --resource-group $RESOURCEGROUP --name $SERVICEBUS --location $LOCATION --sku Basic
 
+echo "CREATING QUEUE..."
 az servicebus queue create --resource-group $RESOURCEGROUP --namespace-name $SERVICEBUS --name $QUEUE --enable-partitioning true
 
+echo "GETTING CONNECTION STRING..."
 CONNECTIONSTRING=$(az servicebus namespace authorization-rule keys list --resource-group $RESOURCEGROUP --namespace-name $SERVICEBUS --name RootManageSharedAccessKey --query primaryConnectionString --output tsv)
 
-echo "Connection string:"
+echo "CONNECTION STRING:"
 echo $CONNECTIONSTRING
 

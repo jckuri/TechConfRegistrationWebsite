@@ -212,4 +212,371 @@ func new --name QueueTrigger --template "Azure Service Bus Queue trigger" --lang
 
 [web/app/routes.py](web/app/routes.py)
 
-### ABC
+### Create Function App
+
+`sh create_function_app.sh`
+
+```
+$ sh create_function_app.sh 
+PREFIX: jckuriproject3
+RESOURCEGROUP: jckuriproject3resourcegroup
+LOCATION: westus
+STORAGEACCOUNT: jckuriproject3store
+FUNCTIONAPP: jckuriproject3functionapp
+{
+  "accessTier": "Hot",
+  "allowBlobPublicAccess": true,
+  "allowCrossTenantReplication": null,
+  "allowSharedKeyAccess": null,
+  "azureFilesIdentityBasedAuthentication": null,
+  "blobRestoreStatus": null,
+  "creationTime": "2021-11-24T02:39:30.823647+00:00",
+  "customDomain": null,
+  "defaultToOAuthAuthentication": null,
+  "enableHttpsTrafficOnly": true,
+  "enableNfsV3": null,
+  "encryption": {
+    "encryptionIdentity": null,
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "requireInfrastructureEncryption": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2021-11-24T02:39:30.917414+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2021-11-24T02:39:30.917414+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "extendedLocation": null,
+  "failoverInProgress": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/jckuriproject3resourcegroup/providers/Microsoft.Storage/storageAccounts/jckuriproject3store",
+  "identity": null,
+  "immutableStorageWithVersioning": null,
+  "isHnsEnabled": null,
+  "keyCreationTime": {
+    "key1": "2021-11-24T02:39:30.917414+00:00",
+    "key2": "2021-11-24T02:39:30.917414+00:00"
+  },
+  "keyPolicy": null,
+  "kind": "StorageV2",
+  "largeFileSharesState": null,
+  "lastGeoFailoverTime": null,
+  "location": "westus",
+  "minimumTlsVersion": "TLS1_0",
+  "name": "jckuriproject3store",
+  "networkRuleSet": {
+    "bypass": "AzureServices",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "resourceAccessRules": null,
+    "virtualNetworkRules": []
+  },
+  "primaryEndpoints": {
+    "blob": "https://jckuriproject3store.blob.core.windows.net/",
+    "dfs": "https://jckuriproject3store.dfs.core.windows.net/",
+    "file": "https://jckuriproject3store.file.core.windows.net/",
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://jckuriproject3store.queue.core.windows.net/",
+    "table": "https://jckuriproject3store.table.core.windows.net/",
+    "web": "https://jckuriproject3store.z22.web.core.windows.net/"
+  },
+  "primaryLocation": "westus",
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "jckuriproject3resourcegroup",
+  "routingPreference": null,
+  "sasPolicy": null,
+  "secondaryEndpoints": {
+    "blob": "https://jckuriproject3store-secondary.blob.core.windows.net/",
+    "dfs": "https://jckuriproject3store-secondary.dfs.core.windows.net/",
+    "file": null,
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://jckuriproject3store-secondary.queue.core.windows.net/",
+    "table": "https://jckuriproject3store-secondary.table.core.windows.net/",
+    "web": "https://jckuriproject3store-secondary.z22.web.core.windows.net/"
+  },
+  "secondaryLocation": "eastus",
+  "sku": {
+    "name": "Standard_RAGRS",
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": "available",
+  "tags": {},
+  "type": "Microsoft.Storage/storageAccounts"
+}
+No functions version specified so defaulting to 2. In the future, specifying a version will be required. To create a 2.x function you would pass in the flag `--functions-version 2`
+Your Linux function app 'jckuriproject3functionapp', that uses a consumption plan has been successfully created but is not active until content is published using Azure Portal or the Functions Core Tools.
+Application Insights "jckuriproject3functionapp" was created for this Function App. You can visit https://portal.azure.com/#resource/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/jckuriproject3resourcegroup/providers/microsoft.insights/components/jckuriproject3functionapp/overview to view your Application Insights component
+{
+  "availabilityState": "Normal",
+  "clientAffinityEnabled": false,
+  "clientCertEnabled": false,
+  "clientCertExclusionPaths": null,
+  "clientCertMode": "Required",
+  "cloningInfo": null,
+  "containerSize": 0,
+  "customDomainVerificationId": "72BAEDF6151DB46B3CE9B092968630DB957E6D4719E4CBA98BA78282E0544C99",
+  "dailyMemoryTimeQuota": 0,
+  "defaultHostName": "jckuriproject3functionapp.azurewebsites.net",
+  "enabled": true,
+  "enabledHostNames": [
+    "jckuriproject3functionapp.azurewebsites.net",
+    "jckuriproject3functionapp.scm.azurewebsites.net"
+  ],
+  "hostNameSslStates": [
+    {
+      "hostType": "Standard",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "jckuriproject3functionapp.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    },
+    {
+      "hostType": "Repository",
+      "ipBasedSslResult": null,
+      "ipBasedSslState": "NotConfigured",
+      "name": "jckuriproject3functionapp.scm.azurewebsites.net",
+      "sslState": "Disabled",
+      "thumbprint": null,
+      "toUpdate": null,
+      "toUpdateIpBasedSsl": null,
+      "virtualIp": null
+    }
+  ],
+  "hostNames": [
+    "jckuriproject3functionapp.azurewebsites.net"
+  ],
+  "hostNamesDisabled": false,
+  "hostingEnvironmentProfile": null,
+  "httpsOnly": false,
+  "hyperV": false,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/jckuriproject3resourcegroup/providers/Microsoft.Web/sites/jckuriproject3functionapp",
+  "identity": null,
+  "inProgressOperationId": null,
+  "isDefaultContainer": null,
+  "isXenon": false,
+  "kind": "functionapp,linux",
+  "lastModifiedTimeUtc": "2021-11-24T02:40:00.523333",
+  "location": "westus",
+  "maxNumberOfWorkers": null,
+  "name": "jckuriproject3functionapp",
+  "outboundIpAddresses": "13.93.220.109,13.93.205.56,52.160.105.227,104.209.45.67,13.91.108.234",
+  "possibleOutboundIpAddresses": "13.93.220.109,13.93.205.56,52.160.105.227,104.209.45.67,13.91.108.234,13.93.235.174,52.160.85.43",
+  "redundancyMode": "None",
+  "repositorySiteName": "jckuriproject3functionapp",
+  "reserved": true,
+  "resourceGroup": "jckuriproject3resourcegroup",
+  "scmSiteAlsoStopped": false,
+  "serverFarmId": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/jckuriproject3resourcegroup/providers/Microsoft.Web/serverfarms/WestUSLinuxDynamicPlan",
+  "siteConfig": {
+    "acrUseManagedIdentityCreds": false,
+    "acrUserManagedIdentityId": null,
+    "alwaysOn": false,
+    "apiDefinition": null,
+    "apiManagementConfig": null,
+    "appCommandLine": null,
+    "appSettings": null,
+    "autoHealEnabled": null,
+    "autoHealRules": null,
+    "autoSwapSlotName": null,
+    "azureMonitorLogCategories": null,
+    "azureStorageAccounts": null,
+    "connectionStrings": null,
+    "cors": null,
+    "customAppPoolIdentityAdminState": null,
+    "customAppPoolIdentityTenantState": null,
+    "defaultDocuments": null,
+    "detailedErrorLoggingEnabled": null,
+    "documentRoot": null,
+    "experiments": null,
+    "fileChangeAuditEnabled": null,
+    "ftpsState": null,
+    "functionAppScaleLimit": 0,
+    "functionsRuntimeScaleMonitoringEnabled": null,
+    "handlerMappings": null,
+    "healthCheckPath": null,
+    "http20Enabled": false,
+    "httpLoggingEnabled": null,
+    "ipSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allow all access",
+        "headers": null,
+        "ipAddress": "Any",
+        "name": "Allow all",
+        "priority": 1,
+        "subnetMask": null,
+        "subnetTrafficTag": null,
+        "tag": null,
+        "vnetSubnetResourceId": null,
+        "vnetTrafficTag": null
+      }
+    ],
+    "javaContainer": null,
+    "javaContainerVersion": null,
+    "javaVersion": null,
+    "keyVaultReferenceIdentity": null,
+    "limits": null,
+    "linuxFxVersion": "",
+    "loadBalancing": null,
+    "localMySqlEnabled": null,
+    "logsDirectorySizeLimit": null,
+    "machineKey": null,
+    "managedPipelineMode": null,
+    "managedServiceIdentityId": null,
+    "metadata": null,
+    "minTlsVersion": null,
+    "minimumElasticInstanceCount": 0,
+    "netFrameworkVersion": null,
+    "nodeVersion": null,
+    "numberOfWorkers": 1,
+    "phpVersion": null,
+    "powerShellVersion": null,
+    "preWarmedInstanceCount": null,
+    "publicNetworkAccess": null,
+    "publishingPassword": null,
+    "publishingUsername": null,
+    "push": null,
+    "pythonVersion": null,
+    "remoteDebuggingEnabled": null,
+    "remoteDebuggingVersion": null,
+    "requestTracingEnabled": null,
+    "requestTracingExpirationTime": null,
+    "routingRules": null,
+    "runtimeADUser": null,
+    "runtimeADUserPassword": null,
+    "scmIpSecurityRestrictions": [
+      {
+        "action": "Allow",
+        "description": "Allow all access",
+        "headers": null,
+        "ipAddress": "Any",
+        "name": "Allow all",
+        "priority": 1,
+        "subnetMask": null,
+        "subnetTrafficTag": null,
+        "tag": null,
+        "vnetSubnetResourceId": null,
+        "vnetTrafficTag": null
+      }
+    ],
+    "scmIpSecurityRestrictionsUseMain": null,
+    "scmMinTlsVersion": null,
+    "scmType": null,
+    "sitePort": null,
+    "tracingOptions": null,
+    "use32BitWorkerProcess": null,
+    "virtualApplications": null,
+    "vnetName": null,
+    "vnetPrivatePortsCount": null,
+    "vnetRouteAllEnabled": null,
+    "webSocketsEnabled": null,
+    "websiteTimeZone": null,
+    "winAuthAdminState": null,
+    "winAuthTenantState": null,
+    "windowsFxVersion": null,
+    "xManagedServiceIdentityId": null
+  },
+  "slotSwapStatus": null,
+  "state": "Running",
+  "suspendedTill": null,
+  "systemData": null,
+  "tags": null,
+  "targetSwapSlot": null,
+  "trafficManagerHostNames": null,
+  "type": "Microsoft.Web/sites",
+  "usageState": "Normal"
+}
+```
+
+### Create Service Bus
+
+`sh create_service_bus.sh`
+
+```
+$ sh create_service_bus.sh 
+PREFIX: jckuriproject3
+RESOURCEGROUP: jckuriproject3resourcegroup
+LOCATION: westus
+SERVICEBUS: jckuriproject3servicebus
+QUEUE: jckuriproject3queue
+CREATING SERVICE BUS...
+{
+  "createdAt": "2021-11-24T02:48:24.633000+00:00",
+  "encryption": null,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/jckuriproject3resourcegroup/providers/Microsoft.ServiceBus/namespaces/jckuriproject3servicebus",
+  "identity": null,
+  "location": "West US",
+  "metricId": "4ce66251-0dc2-45c1-9b68-bdb09277367e:jckuriproject3servicebus",
+  "name": "jckuriproject3servicebus",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "jckuriproject3resourcegroup",
+  "serviceBusEndpoint": "https://jckuriproject3servicebus.servicebus.windows.net:443/",
+  "sku": {
+    "capacity": null,
+    "name": "Basic",
+    "tier": "Basic"
+  },
+  "tags": {},
+  "type": "Microsoft.ServiceBus/Namespaces",
+  "updatedAt": "2021-11-24T02:49:08.730000+00:00",
+  "zoneRedundant": false
+}
+CREATING QUEUE...
+{
+  "accessedAt": "0001-01-01T00:00:00",
+  "autoDeleteOnIdle": "10675199 days, 2:48:05.477581",
+  "countDetails": {
+    "activeMessageCount": 0,
+    "deadLetterMessageCount": 0,
+    "scheduledMessageCount": 0,
+    "transferDeadLetterMessageCount": 0,
+    "transferMessageCount": 0
+  },
+  "createdAt": "2021-11-24T02:49:29.043000+00:00",
+  "deadLetteringOnMessageExpiration": false,
+  "defaultMessageTimeToLive": "14 days, 0:00:00",
+  "duplicateDetectionHistoryTimeWindow": "0:10:00",
+  "enableBatchedOperations": true,
+  "enableExpress": false,
+  "enablePartitioning": true,
+  "forwardDeadLetteredMessagesTo": null,
+  "forwardTo": null,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/jckuriproject3resourcegroup/providers/Microsoft.ServiceBus/namespaces/jckuriproject3servicebus/queues/jckuriproject3queue",
+  "location": "West US",
+  "lockDuration": "0:01:00",
+  "maxDeliveryCount": 10,
+  "maxSizeInMegabytes": 16384,
+  "messageCount": 0,
+  "name": "jckuriproject3queue",
+  "requiresDuplicateDetection": false,
+  "requiresSession": false,
+  "resourceGroup": "jckuriproject3resourcegroup",
+  "sizeInBytes": 0,
+  "status": "Active",
+  "type": "Microsoft.ServiceBus/Namespaces/Queues",
+  "updatedAt": "2021-11-24T02:49:29.223000+00:00"
+}
+GETTING CONNECTION STRING...
+CONNECTION STRING:
+Endpoint=sb://jckuriproject3servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FpSyBA3JLPz8R/zeYubqpZHRjZMRDYBa5VhUhE5kNNo=
+```
+
+
