@@ -587,4 +587,34 @@ Update the attributes `queueName` and `connection` in the file `function.json`.
 
 Update the file `config.py`.
 
-### 
+### Locally test the Function App and the Web App
+
+```
+cd function
+pipenv shell
+pipenv install
+func start
+```
+
+```
+cd web
+pipenv shell
+pipenv install
+python application.py
+```
+
+### Deploy the Function App and the Web App to Azure
+
+```
+cd function
+pipenv shell
+pipenv install
+func azure functionapp publish jckuriproject3functionapp
+```
+
+```
+cd web
+pipenv shell
+pipenv install
+az webapp up --resource-group jckuriproject3resourcegroup --name jckuriproject3techconf --sku F1 
+```
