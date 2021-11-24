@@ -274,6 +274,7 @@ func new --name QueueTrigger --template "Azure Service Bus Queue trigger" --lang
 Modify the QueueTrigger to send the notifications to attendees in an asynchronous way:
 [function/QueueTrigger/__init__.py](function/QueueTrigger/__init__.py)
 
+Modify the TODO section of this file:
 [web/app/routes.py](web/app/routes.py)
 
 ### Create Function App
