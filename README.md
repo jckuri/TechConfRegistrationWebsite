@@ -579,4 +579,12 @@ CONNECTION STRING:
 Endpoint=sb://jckuriproject3servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FpSyBA3JLPz8R/zeYubqpZHRjZMRDYBa5VhUhE5kNNo=
 ```
 
+### Update Attributes
 
+Update the attributes `AzureWebJobsStorage`, `AzureWebJobsServiceBus` and `SENDGRID_API_KEY` in the file `local.settings.json` and in the configuration of the function app in the Azure portal.
+
+Update the attributes `queueName` and `connection` in the file `function.json`.
+
+Update the file `config.py`.
+
+### 
