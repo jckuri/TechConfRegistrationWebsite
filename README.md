@@ -26,9 +26,15 @@ https://techconf2022.azurewebsites.net/
 	
 Student provides a screenshot of the Azure Postgres database resource created in Azure showing the database name, version, server name
 
+![screenshots/postgres_database.png](screenshots/postgres_database.png)
+
 ### Restore database backup to Azure Postgres database
 	
 Student provides a screenshot of the web app successfully loading the list of attendees and notifications from the deployed website
+
+![screenshots/webapp_attendees.png](screenshots/webapp_attendees.png)
+
+![screenshots/webapp_notifications.png](screenshots/webapp_notifications.png)
 
 ## Migrate Background Process
 
