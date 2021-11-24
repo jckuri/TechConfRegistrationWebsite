@@ -237,14 +237,18 @@ Go to the PG Admin page and log in with your credentials:
 
 http://127.0.0.1/pgadmin4/browser/
 
-Create a new server. Right click on `Servers`. Select `Create`. Click on `Server...`
+Create a new server. Right click on `Servers`. Select `Create`. Click on `Server...`.
 Enter the server name, the host address, the user name, and the password of the database connection.
 
 ![images/database_connection.png](images/database_connection.png)
 
-
+Right click on `techconfdb`. Click on `Restore...`. Select the file `techconfdb_backup.tar`.
+And restore the database.
 
 ![images/restore_database.png](images/restore_database.png)
+
+Right click on `techconfdb`. Click on `Query Tool`.
+Type the following script to modify some fields on the database and push the `Play` button to run the script.
 
 ```
 CREATE SEQUENCE attendee_id START 6 OWNED BY attendee.id;
