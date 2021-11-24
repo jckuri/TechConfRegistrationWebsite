@@ -60,6 +60,8 @@ Student provides screenshots of the following showing functionality of the deplo
 
 ![screenshots/notification_completed.png](screenshots/notification_completed.png)
 
+![screenshots/email_sent.png](screenshots/email_sent.png)
+
 ## Predicting Costs
 
 ### Cost-effective architecture for web app and function
