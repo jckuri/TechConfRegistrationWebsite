@@ -660,6 +660,8 @@ Update the file [web/config.py](web/config.py) and complete all the TODOs.
 
 ### Locally test the Function App and the Web App
 
+Open 2 new terminals and run these 2 sets of commands in order to locally test the Function App and to locally test the Web App:
+
 ```
 pipenv shell
 pipenv install
@@ -676,6 +678,8 @@ python application.py
 
 ### Deploy the Function App and the Web App to Azure
 
+By using the 2 previous terminals, run these 2 sets of commands in order to deploy in Azure the Function App and the WebApp:
+
 ```
 pipenv shell
 pipenv install
@@ -691,5 +695,7 @@ az webapp up --resource-group jckuriproject3resourcegroup --name TECHCONF2022 --
 ```
 
 ### Test the Web App
+
+Go to the website: https://techconf2022.azurewebsites.net/
 
 Use the functions registration and send notification.
