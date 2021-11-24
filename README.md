@@ -279,7 +279,8 @@ Modify the TODO section of this file:
 
 ### Create Function App
 
-`sh create_function_app.sh`
+Run the following command `sh create_function_app.sh` in order to create the Function App.
+The result should be something like this:
 
 ```
 $ sh create_function_app.sh 
@@ -573,7 +574,8 @@ Application Insights "jckuriproject3functionapp" was created for this Function A
 
 ### Create Service Bus
 
-`sh create_service_bus.sh`
+Run the following command `sh create_service_bus.sh` in order to create the Service Bus.
+The result should be something like this:
 
 ```
 $ sh create_service_bus.sh 
