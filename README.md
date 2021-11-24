@@ -51,6 +51,11 @@ Student provides a screenshot of the Azure Function app running in Azure showing
 Student provides screenshots of the following showing functionality of the deployed site:
 
 1. Submitting a new notification
+
+![screenshots/new_notification.png](screenshots/new_notification.png)
+
+
+
 2. Notification processed after executing the Azure function
 
 ## Predicting Costs
