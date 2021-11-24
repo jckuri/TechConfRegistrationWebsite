@@ -85,7 +85,7 @@ Student provides a README that includes a short explanation and reasoning of the
 
 Student provides a README that includes a monthly cost analysis of the project detailing each resource’s cost
 
-| RESOURCE                             | NAME                      | TIER                                        | MONTHLY COST |
+| RESOURCE TYPE                        | RESOURCE NAME             | TIER                                        | MONTHLY COST |
 |--------------------------------------|---------------------------|---------------------------------------------|--------------|
 | Function App                         | jckuriproject3functionapp | Consumption                                 | $0           |
 | Service Bus Namespace                | jckuriproject3servicebus  | Basic                                       | $0.05        |
