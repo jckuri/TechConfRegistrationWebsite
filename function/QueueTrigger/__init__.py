@@ -3,7 +3,6 @@ import logging
 import sendgrid
 import datetime
 import psycopg2
-import os
 from config import BaseConfig as Config
 
 def main(msg: azure.functions.ServiceBusMessage):
