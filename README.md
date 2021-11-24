@@ -233,7 +233,16 @@ Creating database...
 
 ### Restore the database
 
+Go to the PG Admin page and log in with your credentials:
+
+http://127.0.0.1/pgadmin4/browser/
+
+Create a new server. Right click on `Servers`. Select `Create`. Click on `Server...`
+Enter the server name, the host address, the user name, and the password of the database connection.
+
 ![images/database_connection.png](images/database_connection.png)
+
+
 
 ![images/restore_database.png](images/restore_database.png)
 
