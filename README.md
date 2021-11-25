@@ -85,6 +85,12 @@ Student provides a README that includes a short explanation and reasoning of the
 
 Student provides a README that includes a monthly cost analysis of the project detailing each resource’s cost
 
+This is my second submission. So, I corrected my previous mistakes:
+- I missed providing the cost for Sendgrid - Sending mail.
+- Cost analysis is done on Testing/Development level environment. Such environment will not be responsive & also will not withstand much load etc., Hence it is always recommended to use production level environment for deployment.
+
+#### My previous analysis:
+
 | RESOURCE TYPE                        | RESOURCE NAME             | TIER                                        | MONTHLY COST |
 |--------------------------------------|---------------------------|---------------------------------------------|--------------|
 | Function App                         | jckuriproject3functionapp | Consumption                                 | $0           |
@@ -92,6 +98,21 @@ Student provides a README that includes a monthly cost analysis of the project d
 | Azure Database for PostgreSQL server | jckuriproject3sqlserver   | B_Gen5_1                                    | $37.77       |
 | Storage account                      | jckuriproject3store       | Standard/Hot StorageV2 (general purpose v2) | $20.80       |
 | App Service                          | TECHCONF2022              | F1: Free                                    | $0           |
+
+Total monthly cost:
+
+0 + 0.05 + 37.77 + 20.80 + 0 = $58.62
+
+#### My new analysis which includes SendGrid and production-level services:
+
+| RESOURCE TYPE                        | RESOURCE NAME             | TIER                                        | MONTHLY COST |
+|--------------------------------------|---------------------------|---------------------------------------------|--------------|
+| Function App                         | jckuriproject3functionapp | Consumption                                 | $0           |
+| Service Bus Namespace                | jckuriproject3servicebus  | Standard                                    | $9.81        |
+| Azure Database for PostgreSQL server | jckuriproject3sqlserver   | Gen 5, 2 vCore                              | $138.47      |
+| Storage account                      | jckuriproject3store       | Standard/Hot StorageV2 (general purpose v2) | $21.84       |
+| App Service                          | TECHCONF2022              | Basic                                       | $54.75       |
+| SendGrid                             | jckuri@....com            | Pro (Most Popular)                          | $89.95       |
 
 Total monthly cost:
 
