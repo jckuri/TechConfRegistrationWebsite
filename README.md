@@ -118,6 +118,10 @@ Total monthly cost:
 
 0 + 9.81 + 138.47 + 21.84 + 54.75 + 89.95 = $314.82
 
+I used the pricing calculator for this cost analysis:
+
+https://azure.microsoft.com/en-in/pricing/calculator/
+
 --------------------------------------------------------------------------------
 
 # INSTRUCTIONS TO INSTALL AND TO RUN THE PROJECT
