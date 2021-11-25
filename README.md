@@ -87,7 +87,7 @@ Student provides a README that includes a monthly cost analysis of the project d
 
 This is my second submission. So, I corrected my previous mistakes:
 - I missed providing the cost for Sendgrid - Sending mail.
-- Cost analysis is done on Testing/Development level environment. Such environment will not be responsive & also will not withstand much load etc., Hence it is always recommended to use production level environment for deployment.
+- Cost analysis is done on Testing/Development level environment. Such environment will not be responsive and also will not withstand much load. Hence, it is always recommended to use production level environment for deployment.
 
 #### My previous analysis:
 
